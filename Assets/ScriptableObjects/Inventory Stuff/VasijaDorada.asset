@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bad564f34c3ea84bb8679f626cca42c, type: 3}
-  m_Name: Notas Director
+  m_Name: VasijaDorada
   m_EditorClassIdentifier: 
-  itemName: Notas Director
-  itemDescription: Notas que destapan asuntos internos de la EETAC
-  itemImage: {fileID: -3727842135710763035, guid: 1e31b245e22228e4c85079b7833b060b,
+  itemName: Vasija Dorada
+  itemDescription: Antigua vasija de valor incalculable
+  itemImage: {fileID: 2486791165892936337, guid: 6d7db131e1677e14b9e071e02c71fe29,
     type: 3}
   numberHeld: 0
   usable: 0
