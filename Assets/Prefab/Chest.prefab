@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  context: {fileID: 11400000, guid: 6ac795aee733e8444b82a9c00420ea4f, type: 2}
+  context: {fileID: 11400000, guid: 0452afd3fb7735d44b072d0daa253c78, type: 2}
   contents: {fileID: 11400000, guid: a3427f6a688bbfa4a9b802db45ff87cb, type: 2}
   playerInvetory: {fileID: 11400000, guid: 96c1dc78949645b4ebfbe6ab1e1a1d04, type: 2}
   isOpen: 0

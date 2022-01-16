@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e195f6084441eb448bed7d25d0822622, type: 3}
-  m_Name: ReceivedItem
+  m_Name: HealthSignal1
   m_EditorClassIdentifier: 
   listeners: []
