@@ -16,6 +16,7 @@ public class ComunicacionUnity : MonoBehaviour
     string userInventoryItems;
     string item;
     string itemParaBorrar;
+    string[] InventoryItems;
 
 
 
@@ -24,7 +25,7 @@ public class ComunicacionUnity : MonoBehaviour
     public InventoryItem baya;
     public InventoryItem notas;
     public InventoryItem tarta;
-    public InventoryItem basija;
+    public InventoryItem vasija;
     public InventoryItem llaveBar;
     public InventoryItem llaveEETAC;
     public InventoryItem llaveMuseo;
@@ -32,7 +33,7 @@ public class ComunicacionUnity : MonoBehaviour
     public PhysicalItem bayafisica;
     public PhysicalItem tartafisica;
     public PhysicalItem notasfisica;
-    public PhysicalItem basijafisica;
+    public PhysicalItem vasijafisica;
     public PhysicalItem llaveBarfisica;
     public PhysicalItem llaveEETACfisica;
     public PhysicalItem llaveMuseofisica;
@@ -156,6 +157,7 @@ public class ComunicacionUnity : MonoBehaviour
             AndroidJavaObject extras = intent.Call<AndroidJavaObject>("getExtras");
             userInventoryItems = extras.Call<string>("getString", "userInventory");
             Debug.Log("userInventoryItems: " + userInventoryItems);
+            InventoryItems = userInventoryItems.Split(',');
 
         }
     }
@@ -199,8 +201,7 @@ public class ComunicacionUnity : MonoBehaviour
         UnityConnect.Call("saveGame", puntos, vida);
     }
 
-
-
+    
 
 
     public void Update()
@@ -290,32 +291,32 @@ public class ComunicacionUnity : MonoBehaviour
         }
         if (tartafisica.itemrecibido == true)
         {
-            item = bayafisica.thisItem.itemName;
+            item = tartafisica.thisItem.itemName;
             GiveItemServidor();
         }
         if (notasfisica.itemrecibido == true)
         {
-            item = bayafisica.thisItem.itemName;
+            item = notasfisica.thisItem.itemName;
             GiveItemServidor();
         }
-        if (basijafisica.itemrecibido == true)
+        if (vasijafisica.itemrecibido == true)
         {
-            item = bayafisica.thisItem.itemName;
+            item = vasijafisica.thisItem.itemName;
             GiveItemServidor();
         }
         if (llaveBarfisica.itemrecibido == true)
         {
-            item = bayafisica.thisItem.itemName;
+            item = llaveBarfisica.thisItem.itemName;
             GiveItemServidor();
         }
         if (llaveEETACfisica.itemrecibido == true)
         {
-            item = bayafisica.thisItem.itemName;
+            item = llaveEETACfisica.thisItem.itemName;
             GiveItemServidor();
         }
         if (llaveMuseofisica.itemrecibido == true)
         {
-            item = bayafisica.thisItem.itemName;
+            item = llaveMuseofisica.thisItem.itemName;
             GiveItemServidor();
         }
 
@@ -327,24 +328,46 @@ public class ComunicacionUnity : MonoBehaviour
         DeleteItemServidor();
     }
 
+
+    
+
     public void addToInventory(string itemTienda)
     {
-        if (userInventoryItems == baya.itemName)
+        int i = InventoryItems.Length;
+        int j = 0;
+        while (j < i)
         {
-
+            if (InventoryItems[j] == baya.itemName)
+            {
+                bayafisica.AddItemToInventory();
+            }
+            if (InventoryItems[j] == tarta.itemName)
+            {
+                tartafisica.AddItemToInventory();
+            }
+            if (InventoryItems[j] == notas.itemName)
+            {
+                notasfisica.AddItemToInventory();
+            }
+            if (InventoryItems[j] == vasija.itemName)
+            {
+                vasijafisica.AddItemToInventory();
+            }
+            if (InventoryItems[j] == llaveBar.itemName)
+            {
+                llaveBarfisica.AddItemToInventory();
+            }
+            if (InventoryItems[j] == llaveEETAC.itemName)
+            {
+                llaveEETACfisica.AddItemToInventory();
+            }
+            if (InventoryItems[j] == llaveMuseo.itemName)
+            {
+                llaveMuseofisica.AddItemToInventory();
+            }
+            j++;
         }
-        if (userInventoryItems == tarta.itemName)
-        {
-
-        }
-        if (userInventoryItems == notas.itemName)
-        {
-
-        }
-        if (userInventoryItems == basija.itemName)
-        {
-
-        }
+        
     }
 
 
