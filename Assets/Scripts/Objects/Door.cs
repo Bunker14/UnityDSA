@@ -14,14 +14,26 @@ public class Door : Interectable
 {
     [Header("Door variables")]
     public DoorType thisDoorType;
-    public bool open = false;
+    public BoolValue storedOpen;
+    public bool isOpen;
+    //public bool open = false;
     public Inventory playerInventory;
     public SpriteRenderer doorSprite;
     public BoxCollider2D physicsCollider;
     public BoxCollider2D physicsColliderPista;
 
 
-
+    void Start()
+    {
+        
+        isOpen = storedOpen.RuntimeValue;
+        if (isOpen)
+        {
+            doorSprite.enabled = false;
+            physicsCollider.enabled = false;
+            physicsColliderPista.enabled = false;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -44,7 +56,7 @@ public class Door : Interectable
         doorSprite.enabled = false;
         physicsCollider.enabled = false;
         physicsColliderPista.enabled = false;
-        open = true;
+        isOpen = true;
         
 
     }

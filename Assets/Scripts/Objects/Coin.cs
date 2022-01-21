@@ -23,7 +23,7 @@ public class Coin : PowerUp
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            playerInventory.coins += 50;
+            playerInventory.coins += 1;
             powerupSignal.Raise();
             Destroy(this.gameObject);
         }

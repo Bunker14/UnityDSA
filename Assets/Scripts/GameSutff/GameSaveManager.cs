@@ -23,7 +23,7 @@ public class GameSaveManager : MonoBehaviour
 
     void OnEnable()
     {
-        LoadScriptables();
+        //LoadScriptables();
     }
 
     private void OnDisable()

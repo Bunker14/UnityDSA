@@ -31,6 +31,7 @@ public class InventoryItem : ScriptableObject
         {
             numberHeld = 0;
         }
+        //comunicacion.DeletearItemInventario(itemName);
     }
 
 }

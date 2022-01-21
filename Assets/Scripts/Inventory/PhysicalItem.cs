@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PhysicalItem : MonoBehaviour
 {
-    [SerializeField] private PlayerInventory playerInventory;
-    [SerializeField] private InventoryItem thisItem;
-
+    [SerializeField] public PlayerInventory playerInventory;
+    [SerializeField] public InventoryItem thisItem;
+    public bool itemrecibido = false;
 
 
 
@@ -23,7 +23,7 @@ public class PhysicalItem : MonoBehaviour
 
 
 
-    void AddItemToInventory()
+    public void AddItemToInventory()
     {
         if(playerInventory && thisItem)
         {
@@ -36,6 +36,7 @@ public class PhysicalItem : MonoBehaviour
                 playerInventory.myInventory.Add(thisItem);
                 thisItem.numberHeld += 1;
             }
+            itemrecibido = true;
         }
     }
 

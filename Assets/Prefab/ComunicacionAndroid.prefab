@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1591209590797106511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1591209590797106505}
+  - component: {fileID: 4475308790148309204}
+  m_Layer: 0
+  m_Name: ComunicacionAndroid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1591209590797106505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591209590797106511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2970746, y: 1.9296299, z: -1641.2185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4475308790148309204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591209590797106511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84df52995678e14c829c9823e2e90a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventory: {fileID: 11400000, guid: 96c1dc78949645b4ebfbe6ab1e1a1d04, type: 2}
+  baya: {fileID: 11400000, guid: 3e0d637edb0312b42a368269c2dea53b, type: 2}
+  notas: {fileID: 11400000, guid: 08713bd3e70048a4ba2bf837db04da0b, type: 2}
+  tarta: {fileID: 11400000, guid: e088dc3b637e76b4882b5554c43ea33b, type: 2}
+  basija: {fileID: 11400000, guid: 8fddbe8a9e3ab494c9dfe5319683b559, type: 2}
+  llaveBar: {fileID: 11400000, guid: 36c6bc5bf01dd374f84252f6c7a3f126, type: 2}
+  llaveEETAC: {fileID: 11400000, guid: 2eba713c9ba69fe4b9689ef348dfaa99, type: 2}
+  llaveMuseo: {fileID: 11400000, guid: d7bfbfb561b6bd94f8cf26cd9deb598e, type: 2}
+  bayafisica: {fileID: 0}
+  tartafisica: {fileID: 0}
+  notasfisica: {fileID: 0}
+  basijafisica: {fileID: 0}
+  llaveBarfisica: {fileID: 0}
+  llaveEETACfisica: {fileID: 0}
+  llaveMuseofisica: {fileID: 0}

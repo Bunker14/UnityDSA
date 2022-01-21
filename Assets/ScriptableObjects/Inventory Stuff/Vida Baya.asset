@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bad564f34c3ea84bb8679f626cca42c, type: 3}
   m_Name: Vida Baya
   m_EditorClassIdentifier: 
-  itemName: Baya Magica
+  comunicacion: {fileID: 0}
+  itemName: magicBerry
   itemDescription: Recupera toda tu vida con esta baya magica
   itemImage: {fileID: -6351956535989479685, guid: 6d7db131e1677e14b9e071e02c71fe29,
     type: 3}

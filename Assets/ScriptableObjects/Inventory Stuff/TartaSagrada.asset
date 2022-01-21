@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bad564f34c3ea84bb8679f626cca42c, type: 3}
   m_Name: TartaSagrada
   m_EditorClassIdentifier: 
-  itemName: Tarta Sagrada
+  itemName: sacredCake
   itemDescription: Esta tarta se hizo por los mejores pasteleros
   itemImage: {fileID: -4655735641815432708, guid: a4c4ffae62715f5458dd5492b8149a5b,
     type: 3}
-  numberHeld: 2
+  numberHeld: 0
   usable: 0
   unique: 1
   thisEvent:

@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bad564f34c3ea84bb8679f626cca42c, type: 3}
-  m_Name: NotasDirector
+  m_Name: LlaveEETAC
   m_EditorClassIdentifier: 
   comunicacion: {fileID: 0}
-  itemName: directorPapers
-  itemDescription: Notas que destapan asuntos internos de la EETAC
-  itemImage: {fileID: -3727842135710763035, guid: 1e31b245e22228e4c85079b7833b060b,
-    type: 3}
+  itemName: directorOfficeKey
+  itemDescription: Esta llave abre el despacho del director
+  itemImage: {fileID: 21300000, guid: 22635d5729f08a648b18ee1bfaa3f62e, type: 3}
   numberHeld: 0
   usable: 0
   unique: 1
