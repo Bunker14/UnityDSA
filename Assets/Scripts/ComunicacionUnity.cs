@@ -116,9 +116,10 @@ public class ComunicacionUnity : MonoBehaviour
 
     public void GetParameters()
     {
+        Debug.Log("GetParameters");
         AndroidJavaClass UnityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-        AndroidJavaObject launcherActivity = UnityPlayer.GetStatic<AndroidJavaObject>("launcherActivity");
-        AndroidJavaObject intent = launcherActivity.Call<AndroidJavaObject>("getIntent");
+        AndroidJavaObject UnityPlayerActivity = UnityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+        AndroidJavaObject intent = UnityPlayerActivity.Call<AndroidJavaObject>("getIntent");
         bool hasExtra = intent.Call<bool>("hasExtra", "userName");
         if (hasExtra)
         {
@@ -164,41 +165,36 @@ public class ComunicacionUnity : MonoBehaviour
 
     public void UpdateCoins()
     {
-        AndroidJavaClass UnityConnectAndroid = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
-        AndroidJavaObject UnityConnect = UnityConnectAndroid.GetStatic<AndroidJavaObject>("UnityConnect");
-        monedasServidor = UnityConnect.Call<int>("updateCoins", NumeroMonedas);
+        AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
+        monedasServidor = UnityConnect.CallStatic<int>("updateCoins", NumeroMonedas);
         Debug.Log("monedasServidor: " + monedasServidor);
     }
 
     public void UpdateItem()
     {
-        AndroidJavaClass UnityConnectAndroid = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
-        AndroidJavaObject UnityConnect = UnityConnectAndroid.GetStatic<AndroidJavaObject>("UnityConnect");
-        UnityConnect.Call("collectItem", item);
+        AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
+        UnityConnect.CallStatic("collectItem", item);
     }
 
     public void GetItem()
     {
 
-        AndroidJavaClass UnityConnectAndroid = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
-        AndroidJavaObject UnityConnect = UnityConnectAndroid.GetStatic<AndroidJavaObject>("UnityConnect");
-        userInventoryItems = UnityConnect.Call<string>("getUserInventory");
+        AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
+        userInventoryItems = UnityConnect.CallStatic<string>("getUserInventory");
         Debug.Log("userInventoryItems: " + userInventoryItems);
 
     }
 
     public void DeleteItem()
     {
-        AndroidJavaClass UnityConnectAndroid = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
-        AndroidJavaObject UnityConnect = UnityConnectAndroid.GetStatic<AndroidJavaObject>("UnityConnect");
-        UnityConnect.Call("useItem", itemParaBorrar);
+        AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
+        UnityConnect.CallStatic("useItem", itemParaBorrar);
     }
 
     public void GuardarPartida()
     {
-        AndroidJavaClass UnityConnectAndroid = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
-        AndroidJavaObject UnityConnect = UnityConnectAndroid.GetStatic<AndroidJavaObject>("UnityConnect");
-        UnityConnect.Call("saveGame", puntos, vida);
+        AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
+        UnityConnect.CallStatic("saveGame", puntos, vida);
     }
 
     
