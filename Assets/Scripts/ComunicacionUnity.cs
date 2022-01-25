@@ -281,7 +281,9 @@ public class ComunicacionUnity : MonoBehaviour
 
     private IEnumerator ComprobarTienda()
     {
+        
         yield return new WaitForSeconds(25f);
+        myInventory.myInventory.Clear();
         GetItemServidor();
         addToInventory();
     }
