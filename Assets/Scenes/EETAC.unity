@@ -618,7 +618,7 @@ PrefabInstance:
     - target: {fileID: 3137192616628502331, guid: 76bfb40d02fe00b459cef63068d784ac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3137192616628502331, guid: 76bfb40d02fe00b459cef63068d784ac,
         type: 3}
@@ -15365,6 +15365,11 @@ PrefabInstance:
       objectReference: {fileID: 483557420}
     - target: {fileID: 4475308790148309204, guid: 53d8da6b8d4efff4da377ab75d36cb2d,
         type: 3}
+      propertyPath: vasijafisica
+      value: 
+      objectReference: {fileID: 483557420}
+    - target: {fileID: 4475308790148309204, guid: 53d8da6b8d4efff4da377ab75d36cb2d,
+        type: 3}
       propertyPath: llaveBarfisica
       value: 
       objectReference: {fileID: 1881674775}
@@ -15590,7 +15595,7 @@ Transform:
   - {fileID: 1870262473}
   - {fileID: 1310599394}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &968741500
 GameObject:
@@ -15674,7 +15679,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &968741504
 MonoBehaviour:
@@ -20591,7 +20596,7 @@ PrefabInstance:
     - target: {fileID: 2288110700938889847, guid: 5a32a181c7cfc2844a380d3841b5994c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2288110700938889847, guid: 5a32a181c7cfc2844a380d3841b5994c,
         type: 3}

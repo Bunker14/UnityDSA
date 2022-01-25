@@ -50,19 +50,33 @@ public class ComunicacionUnity : MonoBehaviour
 
     int tap_count;
 
+
+    private static  bool m_Initialized = false;
+
     void Start()
     {
-        if(startroutine < 1)
+        if (!m_Initialized)
         {
+            m_Initialized = true;
+            myInventory.myInventory.Clear();
             GetParametersServidor();
             NumeroMonedas = playerInventory.coins;
             playerInventory.coins = monedasiniciales;
-            temp = NumeroMonedas;
+            temp = monedasiniciales;
             addToInventory();
             startroutine = startroutine + 1;
-
         }
-        
+        //{
+        //    myInventory.myInventory.Clear();
+        //    GetParametersServidor();
+        //    NumeroMonedas = playerInventory.coins;
+        //    playerInventory.coins = monedasiniciales;
+        //    temp = NumeroMonedas;
+        //    addToInventory();
+        //    startroutine = startroutine + 1;
+
+        //}
+
         //NumeroMonedas = playerInventory.coins;
         //playerInventory.coins = monedasiniciales;
         ////NumeroMonedas = playerInventory.coins;
@@ -70,7 +84,7 @@ public class ComunicacionUnity : MonoBehaviour
         //addToInventory();
     }
 
-    public void Quit()
+    public void OnApplicationQuit()
     {
         puntos = puntos + NumeroMonedas * 10;
         GuardarPartidaServidor();
@@ -221,6 +235,7 @@ public class ComunicacionUnity : MonoBehaviour
         StartCoroutine(ComprobarTienda());
 
 
+
         //void NumeroCoins()
         //{
 
@@ -292,10 +307,10 @@ public class ComunicacionUnity : MonoBehaviour
     {
 
 
-        if (playerInventory.coins > monedasiniciales)
+        if (playerInventory.coins > temp)
         {
             GiveCoinsServidor();
-            monedasiniciales = monedasiniciales + 1;
+            temp = temp + 1;
         }
         else if (monedasServidor < NumeroMonedas)
         {
