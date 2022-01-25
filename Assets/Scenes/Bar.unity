@@ -1174,6 +1174,18 @@ PrefabInstance:
       objectReference: {fileID: 382639658}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53d8da6b8d4efff4da377ab75d36cb2d, type: 3}
+--- !u!114 &178943215 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4475308790148309204, guid: 53d8da6b8d4efff4da377ab75d36cb2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 178943214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84df52995678e14c829c9823e2e90a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &373512473
 GameObject:
   m_ObjectHideFlags: 0
@@ -5263,6 +5275,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2288110700524322725, guid: 5a32a181c7cfc2844a380d3841b5994c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 178943215}
+    - target: {fileID: 2288110700524322725, guid: 5a32a181c7cfc2844a380d3841b5994c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: cerrarapp
+      objectReference: {fileID: 0}
     - target: {fileID: 2288110700938889842, guid: 5a32a181c7cfc2844a380d3841b5994c,
         type: 3}
       propertyPath: m_Name

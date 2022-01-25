@@ -8,11 +8,11 @@ public class ComunicacionUnity : MonoBehaviour
 
     string Username;
     int NumeroMonedas;
-    int temp = 0;
+    int temp;
     int monedasServidor;
     int monedasiniciales;
     int puntos;
-    int vida = 3;
+    int vida = 100;
     string userInventoryItems;
     string item;
     string itemParaBorrar;
@@ -55,17 +55,13 @@ public class ComunicacionUnity : MonoBehaviour
 
     void Start()
     {
-        if (!m_Initialized)
-        {
-            m_Initialized = true;
-            myInventory.myInventory.Clear();
-            GetParametersServidor();
-            NumeroMonedas = playerInventory.coins;
-            playerInventory.coins = monedasiniciales;
-            temp = monedasiniciales;
-            addToInventory();
-            startroutine = startroutine + 1;
-        }
+        myInventory.myInventory.Clear();
+        GetParametersServidor();
+        NumeroMonedas = playerInventory.coins;
+        playerInventory.coins = monedasiniciales;
+        temp = monedasiniciales;
+        addToInventory();
+        startroutine = startroutine + 1;
         //{
         //    myInventory.myInventory.Clear();
         //    GetParametersServidor();
@@ -84,7 +80,7 @@ public class ComunicacionUnity : MonoBehaviour
         //addToInventory();
     }
 
-    public void OnApplicationQuit()
+    public void cerrarapp()
     {
         puntos = puntos + NumeroMonedas * 10;
         GuardarPartidaServidor();
