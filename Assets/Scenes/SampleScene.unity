@@ -2237,6 +2237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6583791221960029351, guid: e1386162b1b0b1a4694e22a2de471a31,
         type: 3}
+      propertyPath: dialog
+      value: Bar Piscina de la Muerta
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583791221960029351, guid: e1386162b1b0b1a4694e22a2de471a31,
+        type: 3}
       propertyPath: context
       value: 
       objectReference: {fileID: 11400000, guid: 0452afd3fb7735d44b072d0daa253c78,
@@ -2381,6 +2386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.x
       value: -0.53133774
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583791221960029351, guid: e1386162b1b0b1a4694e22a2de471a31,
+        type: 3}
+      propertyPath: dialog
+      value: A la EETAC
       objectReference: {fileID: 0}
     - target: {fileID: 6583791221960029351, guid: e1386162b1b0b1a4694e22a2de471a31,
         type: 3}
