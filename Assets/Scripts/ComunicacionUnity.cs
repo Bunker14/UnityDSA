@@ -340,13 +340,18 @@ public class ComunicacionUnity : MonoBehaviour
     public void addToInventory()
     {
         int i = InventoryItems.Length;
-        int j = 0;
+        if (InventoryItems[0] == "0")
+        {           
+        }
+        else
+        {
+            bayafisica.AddItemToInventory();
+        }
+
+        int j = 1;
         while (j < i)
         {
-            if (InventoryItems[j] == baya.itemName)
-            {
-                bayafisica.AddItemToInventory();
-            }
+
             if (InventoryItems[j] == tarta.itemName)
             {
                 tartafisica.AddItemToInventory();
