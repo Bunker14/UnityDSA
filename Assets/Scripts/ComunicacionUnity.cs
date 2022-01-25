@@ -196,6 +196,7 @@ public class ComunicacionUnity : MonoBehaviour
         AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
         userInventoryItems = UnityConnect.CallStatic<string>("getUserInventory");
         Debug.Log("userInventoryItems: " + userInventoryItems);
+        InventoryItems = userInventoryItems.Split(',');
     }
 
     public void DeleteItem()
@@ -217,6 +218,8 @@ public class ComunicacionUnity : MonoBehaviour
     {
         NumeroCoins();
         itemaded();
+        StartCoroutine(ComprobarTienda());
+
 
         //void NumeroCoins()
         //{
@@ -273,7 +276,14 @@ public class ComunicacionUnity : MonoBehaviour
         //    }
 
         //}
-    
+
+    }
+
+    private IEnumerator ComprobarTienda()
+    {
+        yield return new WaitForSeconds(25f);
+        GetItemServidor();
+        addToInventory();
     }
 
     public void NumeroCoins()
