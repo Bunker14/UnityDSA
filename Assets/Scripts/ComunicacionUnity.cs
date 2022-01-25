@@ -57,7 +57,6 @@ public class ComunicacionUnity : MonoBehaviour
         //GuardarPartidaServidor();
     }
 
-
     public void GetParametersServidor()
     {
 #if UNITY_ANDROID
@@ -113,8 +112,6 @@ public class ComunicacionUnity : MonoBehaviour
 #endif
     }
 
-
-
     public void GetParameters()
     {
         Debug.Log("GetParameters");
@@ -127,45 +124,41 @@ public class ComunicacionUnity : MonoBehaviour
             AndroidJavaObject extras = intent.Call<AndroidJavaObject>("getExtras");
             Username = extras.Call<string>("getString", "userName");
             Debug.Log("Username: " + Username);
-
         }
-        bool hasExtra2 = intent.Call<bool>("hasExtra2", "coins");
+        bool hasExtra2 = intent.Call<bool>("hasExtra", "coins");
         if (hasExtra2)
         {
             AndroidJavaObject extras = intent.Call<AndroidJavaObject>("getExtras");
             monedasiniciales = extras.Call<int>("getInt", "coins");
             Debug.Log("monedasiniciales: " + monedasiniciales);
-
         }
-        bool hasExtra3 = intent.Call<bool>("hasExtra3", "points");
+        bool hasExtra3 = intent.Call<bool>("hasExtra", "points");
         if (hasExtra3)
         {
             AndroidJavaObject extras = intent.Call<AndroidJavaObject>("getExtras");
             puntos = extras.Call<int>("getInt", "points");
             Debug.Log("puntos: " + puntos);
-
         }
-        bool hasExtra4 = intent.Call<bool>("hasExtra4", "health");
+        bool hasExtra4 = intent.Call<bool>("hasExtra", "health");
         if (hasExtra4)
         {
             AndroidJavaObject extras = intent.Call<AndroidJavaObject>("getExtras");
             vida = extras.Call<int>("getInt", "health");
             Debug.Log("vida: " + vida);
-
         }
-        bool hasExtra5 = intent.Call<bool>("hasExtra5", "userInventory");
+        bool hasExtra5 = intent.Call<bool>("hasExtra", "userInventory");
         if (hasExtra5)
         {
             AndroidJavaObject extras = intent.Call<AndroidJavaObject>("getExtras");
             userInventoryItems = extras.Call<string>("getString", "userInventory");
             Debug.Log("userInventoryItems: " + userInventoryItems);
             InventoryItems = userInventoryItems.Split(',');
-
         }
     }
 
     public void UpdateCoins()
     {
+        Debug.Log("UpdateCoins");
         AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
         monedasServidor = UnityConnect.CallStatic<int>("updateCoins", NumeroMonedas);
         Debug.Log("monedasServidor: " + monedasServidor);
@@ -173,34 +166,34 @@ public class ComunicacionUnity : MonoBehaviour
 
     public void UpdateItem()
     {
+        Debug.Log("UpdateItem");
         AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
         UnityConnect.CallStatic("collectItem", item);
     }
 
     public void GetItem()
     {
-
+        Debug.Log("GetItem");
         AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
         userInventoryItems = UnityConnect.CallStatic<string>("getUserInventory");
         Debug.Log("userInventoryItems: " + userInventoryItems);
-
     }
 
     public void DeleteItem()
     {
+        Debug.Log("DeleteItem");
         AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
         UnityConnect.CallStatic("useItem", itemParaBorrar);
     }
 
     public void GuardarPartida()
     {
+        Debug.Log("GuardarPartida");
         AndroidJavaClass UnityConnect = new AndroidJavaClass("com.dsa.frontendprojecte.connections.UnityConnect");
         UnityConnect.CallStatic("saveGame", puntos, vida);
     }
 
-    
-
-
+   
     public void Update()
     {
         NumeroCoins();
