@@ -270,10 +270,10 @@ public class ComunicacionUnity : MonoBehaviour
     {
 
 
-        if (playerInventory.coins > NumeroMonedas)
+        if (playerInventory.coins > monedasiniciales)
         {
             GiveCoinsServidor();
-            temp = NumeroMonedas;
+            monedasiniciales = monedasiniciales + 1;
         }
         else if (monedasServidor < NumeroMonedas)
         {
@@ -379,37 +379,37 @@ public class ComunicacionUnity : MonoBehaviour
             {
                 tartafisica.AddItemToInventory();
                 Inicio_tartafisica = 1;
-                Destroy(this.tartafisica);
+                Destroy(tartafisica.gameObject);
             }
             if (InventoryItems[j] == notas.itemName)
             {
                 notasfisica.AddItemToInventory();
                 Inicio_notasfisica = 1;
-                Destroy(this.notasfisica);
+                Destroy(notasfisica.gameObject);
             }
             if (InventoryItems[j] == vasija.itemName)
             {
                 vasijafisica.AddItemToInventory();
                 Inicio_vasijafisica = 1;
-                Destroy(this.vasijafisica);
+                Destroy(vasijafisica.gameObject);
             }
             if (InventoryItems[j] == llaveBar.itemName)
             {
                 llaveBarfisica.AddItemToInventory();
                 Inicio_llaveBarfisica = 1;
-                Destroy(this.llaveBarfisica);
+                Destroy(llaveBarfisica.gameObject);
             }
             if (InventoryItems[j] == llaveEETAC.itemName)
             {
                 llaveEETACfisica.AddItemToInventory();
                 Inicio_llaveEETACfisica = 1;
-                Destroy(this.llaveEETACfisica);
+                Destroy(llaveEETACfisica.gameObject);
             }
             if (InventoryItems[j] == llaveMuseo.itemName)
             {
                 llaveMuseofisica.AddItemToInventory();
                 Inicio_llaveMuseofisica = 1;
-                Destroy(this.llaveMuseofisica);
+                Destroy(llaveMuseofisica.gameObject);
             }
             j++;
         }
