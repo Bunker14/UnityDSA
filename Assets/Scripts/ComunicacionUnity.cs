@@ -54,8 +54,8 @@ public class ComunicacionUnity : MonoBehaviour
 
     public void Quit()
     {
-        //puntos = NumeroMonedas * 10;
-        //GuardarPartidaServidor();
+        puntos = puntos + NumeroMonedas * 10;
+        GuardarPartidaServidor();
     }
 
 
