@@ -24,7 +24,7 @@ public class ComunicacionUnity : MonoBehaviour
     int Inicio_llaveBarfisica;
     int Inicio_llaveEETACfisica;
     int Inicio_llaveMuseofisica;
-
+    int startroutine;
 
 
 
@@ -45,19 +45,29 @@ public class ComunicacionUnity : MonoBehaviour
     public PhysicalItem llaveBarfisica;
     public PhysicalItem llaveEETACfisica;
     public PhysicalItem llaveMuseofisica;
-
+    
 
 
     int tap_count;
 
     void Start()
     {
-        GetParametersServidor();
-        NumeroMonedas = playerInventory.coins;
-        playerInventory.coins = monedasiniciales;
+        if(startroutine < 1)
+        {
+            GetParametersServidor();
+            NumeroMonedas = playerInventory.coins;
+            playerInventory.coins = monedasiniciales;
+            temp = NumeroMonedas;
+            addToInventory();
+            startroutine = startroutine + 1;
+
+        }
+        
         //NumeroMonedas = playerInventory.coins;
-        temp = NumeroMonedas;
-        addToInventory();
+        //playerInventory.coins = monedasiniciales;
+        ////NumeroMonedas = playerInventory.coins;
+        //temp = NumeroMonedas;
+        //addToInventory();
     }
 
     public void Quit()
