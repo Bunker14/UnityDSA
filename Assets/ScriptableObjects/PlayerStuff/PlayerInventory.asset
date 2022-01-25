@@ -15,4 +15,4 @@ MonoBehaviour:
   currentItem: {fileID: 0}
   items: []
   numberOfKeys: 9
-  coins: 2
+  coins: 6

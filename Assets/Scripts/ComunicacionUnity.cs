@@ -46,7 +46,8 @@ public class ComunicacionUnity : MonoBehaviour
     {
         GetParametersServidor();
         monedasiniciales = NumeroMonedas;
-        NumeroMonedas = playerInventory.coins;
+        playerInventory.coins = monedasiniciales;
+        //NumeroMonedas = playerInventory.coins;
         temp = NumeroMonedas;
         addToInventory();
     }
