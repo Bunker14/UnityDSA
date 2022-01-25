@@ -47,6 +47,7 @@ public class ComunicacionUnity : MonoBehaviour
         GetParametersServidor();
         monedasiniciales = NumeroMonedas;
         NumeroMonedas = playerInventory.coins;
+        temp = NumeroMonedas;
 
     }
 
@@ -204,6 +205,7 @@ public class ComunicacionUnity : MonoBehaviour
     {
         NumeroCoins();
         itemaded();
+
         //void NumeroCoins()
         //{
 
@@ -284,36 +286,43 @@ public class ComunicacionUnity : MonoBehaviour
         {
             item = bayafisica.thisItem.itemName;
             GiveItemServidor();
+            bayafisica.itemrecibido = false;
         }
         if (tartafisica.itemrecibido == true)
         {
             item = tartafisica.thisItem.itemName;
             GiveItemServidor();
+            tartafisica.itemrecibido = false;
         }
         if (notasfisica.itemrecibido == true)
         {
             item = notasfisica.thisItem.itemName;
             GiveItemServidor();
+            notasfisica.itemrecibido = false;
         }
         if (vasijafisica.itemrecibido == true)
         {
             item = vasijafisica.thisItem.itemName;
             GiveItemServidor();
+            vasijafisica.itemrecibido = false;
         }
         if (llaveBarfisica.itemrecibido == true)
         {
             item = llaveBarfisica.thisItem.itemName;
             GiveItemServidor();
+            llaveBarfisica.itemrecibido = false;
         }
         if (llaveEETACfisica.itemrecibido == true)
         {
             item = llaveEETACfisica.thisItem.itemName;
             GiveItemServidor();
+            llaveEETACfisica.itemrecibido = false;
         }
         if (llaveMuseofisica.itemrecibido == true)
         {
             item = llaveMuseofisica.thisItem.itemName;
             GiveItemServidor();
+            llaveMuseofisica.itemrecibido = false;
         }
 
     }

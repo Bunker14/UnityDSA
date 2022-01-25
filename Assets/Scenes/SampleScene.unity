@@ -62440,6 +62440,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4475308790148309204, guid: 53d8da6b8d4efff4da377ab75d36cb2d,
         type: 3}
+      propertyPath: vasija
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fddbe8a9e3ab494c9dfe5319683b559,
+        type: 2}
+    - target: {fileID: 4475308790148309204, guid: 53d8da6b8d4efff4da377ab75d36cb2d,
+        type: 3}
       propertyPath: bayafisica
       value: 
       objectReference: {fileID: 5606280198095344115}
@@ -62456,6 +62462,11 @@ PrefabInstance:
     - target: {fileID: 4475308790148309204, guid: 53d8da6b8d4efff4da377ab75d36cb2d,
         type: 3}
       propertyPath: basijafisica
+      value: 
+      objectReference: {fileID: 1908679010}
+    - target: {fileID: 4475308790148309204, guid: 53d8da6b8d4efff4da377ab75d36cb2d,
+        type: 3}
+      propertyPath: vasijafisica
       value: 
       objectReference: {fileID: 1908679010}
     - target: {fileID: 4475308790148309204, guid: 53d8da6b8d4efff4da377ab75d36cb2d,
