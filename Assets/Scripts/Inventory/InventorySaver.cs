@@ -11,12 +11,12 @@ public class InventorySaver : MonoBehaviour
     private void OnEnable()
     {
         myInventory.myInventory.Clear();
-        LoadScriptables();
+        //LoadScriptables();
     }
 
     private void OnDisable()
     {
-        SaveScriptables();
+        //SaveScriptables();
     }
 
     public void ResetScriptables()

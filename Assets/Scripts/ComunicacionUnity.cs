@@ -48,7 +48,7 @@ public class ComunicacionUnity : MonoBehaviour
         monedasiniciales = NumeroMonedas;
         NumeroMonedas = playerInventory.coins;
         temp = NumeroMonedas;
-
+        addToInventory();
     }
 
     public void Quit()
@@ -336,7 +336,7 @@ public class ComunicacionUnity : MonoBehaviour
 
     
 
-    public void addToInventory(string itemTienda)
+    public void addToInventory()
     {
         int i = InventoryItems.Length;
         int j = 0;
