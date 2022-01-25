@@ -46,15 +46,16 @@ public class ComunicacionUnity : MonoBehaviour
     {
         GetParametersServidor();
         monedasiniciales = NumeroMonedas;
-        NumeroMonedas = playerInventory.coins;
+        playerInventory.coins = monedasiniciales;
+        //NumeroMonedas = playerInventory.coins;
         temp = NumeroMonedas;
-
+        addToInventory();
     }
 
     public void Quit()
     {
-        //puntos = NumeroMonedas * 10;
-        //GuardarPartidaServidor();
+        puntos = puntos + NumeroMonedas * 10;
+        GuardarPartidaServidor();
     }
 
     public void GetParametersServidor()
@@ -329,16 +330,21 @@ public class ComunicacionUnity : MonoBehaviour
 
     
 
-    public void addToInventory(string itemTienda)
+    public void addToInventory()
     {
         int i = InventoryItems.Length;
-        int j = 0;
+        if (InventoryItems[0] == "0")
+        {           
+        }
+        else
+        {
+            bayafisica.AddItemToInventory();
+        }
+
+        int j = 1;
         while (j < i)
         {
-            if (InventoryItems[j] == baya.itemName)
-            {
-                bayafisica.AddItemToInventory();
-            }
+
             if (InventoryItems[j] == tarta.itemName)
             {
                 tartafisica.AddItemToInventory();
