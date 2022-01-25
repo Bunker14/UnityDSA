@@ -45,7 +45,7 @@ public class ComunicacionUnity : MonoBehaviour
     void Start()
     {
         GetParametersServidor();
-        monedasiniciales = NumeroMonedas;
+        NumeroMonedas = monedasiniciales;
         playerInventory.coins = monedasiniciales;
         //NumeroMonedas = playerInventory.coins;
         temp = NumeroMonedas;
@@ -262,7 +262,7 @@ public class ComunicacionUnity : MonoBehaviour
     {
 
 
-        if (NumeroMonedas > temp)
+        if (playerInventory.coins > NumeroMonedas)
         {
             GiveCoinsServidor();
             temp = NumeroMonedas;
