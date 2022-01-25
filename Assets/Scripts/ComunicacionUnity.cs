@@ -17,6 +17,14 @@ public class ComunicacionUnity : MonoBehaviour
     string item;
     string itemParaBorrar;
     string[] InventoryItems;
+    int Inicio_bayafisica;
+    int Inicio_tartafisica;
+    int Inicio_notasfisica;
+    int Inicio_vasijafisica;
+    int Inicio_llaveBarfisica;
+    int Inicio_llaveEETACfisica;
+    int Inicio_llaveMuseofisica;
+
 
 
 
@@ -279,43 +287,64 @@ public class ComunicacionUnity : MonoBehaviour
         if (bayafisica.itemrecibido == true)
         {
             item = bayafisica.thisItem.itemName;
-            GiveItemServidor();
+            if (bayafisica.thisItem.numberHeld > Inicio_bayafisica)
+            {
+                GiveItemServidor();
+            }          
             bayafisica.itemrecibido = false;
         }
         if (tartafisica.itemrecibido == true)
         {
             item = tartafisica.thisItem.itemName;
-            GiveItemServidor();
+            if (tartafisica.thisItem.numberHeld > Inicio_tartafisica)
+            {
+                GiveItemServidor();
+            }
             tartafisica.itemrecibido = false;
         }
         if (notasfisica.itemrecibido == true)
         {
             item = notasfisica.thisItem.itemName;
-            GiveItemServidor();
+            if (notasfisica.thisItem.numberHeld > Inicio_notasfisica)
+            {
+                GiveItemServidor();
+            }
             notasfisica.itemrecibido = false;
         }
         if (vasijafisica.itemrecibido == true)
         {
             item = vasijafisica.thisItem.itemName;
-            GiveItemServidor();
+            if (vasijafisica.thisItem.numberHeld > Inicio_vasijafisica)
+            {
+                GiveItemServidor();
+            }
             vasijafisica.itemrecibido = false;
         }
         if (llaveBarfisica.itemrecibido == true)
         {
             item = llaveBarfisica.thisItem.itemName;
-            GiveItemServidor();
+            if (bayafisica.thisItem.numberHeld > Inicio_llaveBarfisica)
+            {
+                GiveItemServidor();
+            }
             llaveBarfisica.itemrecibido = false;
         }
         if (llaveEETACfisica.itemrecibido == true)
         {
             item = llaveEETACfisica.thisItem.itemName;
-            GiveItemServidor();
+            if (llaveEETACfisica.thisItem.numberHeld > Inicio_llaveEETACfisica)
+            {
+                GiveItemServidor();
+            }
             llaveEETACfisica.itemrecibido = false;
         }
         if (llaveMuseofisica.itemrecibido == true)
         {
             item = llaveMuseofisica.thisItem.itemName;
-            GiveItemServidor();
+            if (bayafisica.thisItem.numberHeld > Inicio_llaveMuseofisica)
+            {
+                GiveItemServidor();
+            }
             llaveMuseofisica.itemrecibido = false;
         }
 
@@ -339,6 +368,7 @@ public class ComunicacionUnity : MonoBehaviour
         else
         {
             bayafisica.AddItemToInventory();
+            Inicio_bayafisica = 1;
         }
 
         int j = 1;
@@ -348,26 +378,38 @@ public class ComunicacionUnity : MonoBehaviour
             if (InventoryItems[j] == tarta.itemName)
             {
                 tartafisica.AddItemToInventory();
+                Inicio_tartafisica = 1;
+                Destroy(this.tartafisica);
             }
             if (InventoryItems[j] == notas.itemName)
             {
                 notasfisica.AddItemToInventory();
+                Inicio_notasfisica = 1;
+                Destroy(this.notasfisica);
             }
             if (InventoryItems[j] == vasija.itemName)
             {
                 vasijafisica.AddItemToInventory();
+                Inicio_vasijafisica = 1;
+                Destroy(this.vasijafisica);
             }
             if (InventoryItems[j] == llaveBar.itemName)
             {
                 llaveBarfisica.AddItemToInventory();
+                Inicio_llaveBarfisica = 1;
+                Destroy(this.llaveBarfisica);
             }
             if (InventoryItems[j] == llaveEETAC.itemName)
             {
                 llaveEETACfisica.AddItemToInventory();
+                Inicio_llaveEETACfisica = 1;
+                Destroy(this.llaveEETACfisica);
             }
             if (InventoryItems[j] == llaveMuseo.itemName)
             {
                 llaveMuseofisica.AddItemToInventory();
+                Inicio_llaveMuseofisica = 1;
+                Destroy(this.llaveMuseofisica);
             }
             j++;
         }
